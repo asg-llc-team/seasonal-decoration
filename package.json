@@ -1,6 +1,6 @@
 {
   "name": "@alpha-singularity-llc/seasonal-decoration",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Mongolian seasonal site decorations for React — Naadam, New Year, Republic Day, and more. Asia/Ulaanbaatar calendar.",
   "license": "MIT",
   "author": "Alpha Singularity LLC",
@@ -48,6 +48,7 @@
   "scripts": {
     "build": "tsup && node scripts/copy-styles.mjs",
     "dev": "tsup --watch",
+    "preview": "vite --config preview/vite.config.ts",
     "prepublishOnly": "pnpm build",
     "typecheck": "tsc --noEmit"
   },
@@ -56,13 +57,17 @@
     "react-dom": ">=18"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitejs/plugin-react": "^5",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "tailwindcss": "^4",
     "tsup": "^8.5.0",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "vite": "^7"
   },
   "publishConfig": {
     "access": "public"

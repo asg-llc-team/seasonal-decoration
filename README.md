@@ -89,6 +89,23 @@ NEXT_PUBLIC_SEASONAL_DECORATION_PREVIEW_DATE=2026-11-14
 
 Format: `YYYY-MM-DD` in Ulaanbaatar calendar.
 
+### Local preview (this repo)
+
+Run the built-in Vite preview app — hot-reloads from `src/`:
+
+```bash
+pnpm install
+pnpm preview
+```
+
+Opens `http://localhost:5173` with preset buttons (Naadam, Republic Day, New Year, etc.). Switch seasons via the toolbar or `?date=2026-11-26` in the URL. Use `?date=live` for today in Asia/Ulaanbaatar.
+
+Optional default in repo root `.env`:
+
+```env
+VITE_SEASONAL_DECORATION_PREVIEW_DATE=2026-07-11
+```
+
 ## Releasing
 
 1. Bump `version` in `package.json` in your PR.
