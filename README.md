@@ -104,7 +104,7 @@ npm publish --access public
 
 Then link Trusted Publishing on the package settings page (`asg-llc-team/seasonal-decoration`, workflow `publish.yml`).
 
-Ensure npm Trusted Publishing matches: repo `asg-llc-team/seasonal-decoration`, workflow `publish.yml`, environment blank (unless set in the workflow job).
+Ensure npm Trusted Publishing matches: repo `asg-llc-team/seasonal-decoration`, workflow `publish.yml`, environment **`production`** (must match the workflow job `environment`).
 
 ## License
 
