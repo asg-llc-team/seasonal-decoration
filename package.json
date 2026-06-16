@@ -6,7 +6,7 @@
   "author": "Alpha Singularity LLC",
   "repository": {
     "type": "git",
-    "url": "https://github.com/asg-llc-team/seasonal-decoration.git"
+    "url": "git+https://github.com/asg-llc-team/seasonal-decoration.git"
   },
   "homepage": "https://github.com/asg-llc-team/seasonal-decoration#readme",
   "bugs": {

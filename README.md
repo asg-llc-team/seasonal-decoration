@@ -91,11 +91,20 @@ Format: `YYYY-MM-DD` in Ulaanbaatar calendar.
 
 ## Releasing
 
-1. Bump `version` in `package.json` in your PR (e.g. `0.1.0` → `0.1.1`).
-2. Merge to `main`.
-3. GitHub Actions publishes via npm **Trusted Publishing** (no token secret needed).
+1. Bump `version` in `package.json` in your PR.
+2. Merge to `main` (or push a tag — workflow runs on relevant path changes).
+3. GitHub Actions publishes via npm **Trusted Publishing**.
 
-Ensure npm Trusted Publishing points at this repo and workflow file `publish.yml`.
+**First release only:** publish once from your machine — Trusted Publishing cannot create a brand-new package on npm:
+
+```bash
+pnpm build
+npm publish --access public
+```
+
+Then link Trusted Publishing on the package settings page (`asg-llc-team/seasonal-decoration`, workflow `publish.yml`).
+
+Ensure npm Trusted Publishing matches: repo `asg-llc-team/seasonal-decoration`, workflow `publish.yml`, environment blank (unless set in the workflow job).
 
 ## License
 
