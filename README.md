@@ -89,6 +89,14 @@ NEXT_PUBLIC_SEASONAL_DECORATION_PREVIEW_DATE=2026-11-14
 
 Format: `YYYY-MM-DD` in Ulaanbaatar calendar.
 
+## Releasing
+
+1. Bump `version` in `package.json` in your PR (e.g. `0.1.0` → `0.1.1`).
+2. Merge to `main`.
+3. GitHub Actions publishes via npm **Trusted Publishing** (no token secret needed).
+
+Ensure npm Trusted Publishing points at this repo and workflow file `publish.yml`.
+
 ## License
 
 MIT © Alpha Singularity LLC
