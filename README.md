@@ -36,8 +36,8 @@ Peer dependencies: `react` and `react-dom` (18+).
 ```ts
 export default {
   content: [
-    './app/**/*.{js,ts,jsx,tsx}',
-    './node_modules/@alpha-singularity-llc/seasonal-decoration/dist/**/*.js',
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@alpha-singularity-llc/seasonal-decoration/dist/**/*.js",
   ],
 };
 ```
@@ -45,7 +45,7 @@ export default {
 And in your global CSS or layout:
 
 ```ts
-import '@alpha-singularity-llc/seasonal-decoration/styles.css';
+import "@alpha-singularity-llc/seasonal-decoration/styles.css";
 ```
 
 ### 2. Add to layout
@@ -54,9 +54,9 @@ import '@alpha-singularity-llc/seasonal-decoration/styles.css';
 
 ```tsx
 // components/seasonal-decoration.tsx
-'use client';
+"use client";
 
-import { SeasonalDecoration } from '@alpha-singularity-llc/seasonal-decoration';
+import { SeasonalDecoration } from "@alpha-singularity-llc/seasonal-decoration";
 
 export function SiteSeasonalDecoration() {
   return <SeasonalDecoration />;
@@ -65,7 +65,7 @@ export function SiteSeasonalDecoration() {
 
 ```tsx
 // app/layout.tsx
-import { SiteSeasonalDecoration } from '@/components/seasonal-decoration';
+import { SiteSeasonalDecoration } from "@/components/seasonal-decoration";
 
 export default function RootLayout({ children }) {
   return (
@@ -111,17 +111,6 @@ VITE_SEASONAL_DECORATION_PREVIEW_DATE=2026-07-11
 1. Bump `version` in `package.json` in your PR.
 2. Merge to `main` (or push a tag — workflow runs on relevant path changes).
 3. GitHub Actions publishes via npm **Trusted Publishing**.
-
-**First release only:** publish once from your machine — Trusted Publishing cannot create a brand-new package on npm:
-
-```bash
-pnpm build
-npm publish --access public
-```
-
-Then link Trusted Publishing on the package settings page (`asg-llc-team/seasonal-decoration`, workflow `publish.yml`).
-
-Ensure npm Trusted Publishing matches: repo `asg-llc-team/seasonal-decoration`, workflow `publish.yml`, environment **`production`** (must match the workflow job `environment`).
 
 ## License
 
