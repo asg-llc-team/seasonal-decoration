@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - '.github/workflows/publish.yml'
       - 'src/**'
       - 'styles/**'
       - 'package.json'
